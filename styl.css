@@ -1,0 +1,59 @@
+@font-face {
+    font-family: Poppins;
+    src: url(fonty/Poppins-Regular.ttf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: Poppins;
+    src: url(fonty/Poppins-ExtraBold.ttf);
+    font-weight: bold;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: #1b0663;
+    background: url("obrazky/pozadi.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Hlavní nadpis – větší velikost */
+h1 {
+    text-align: center;
+    font-size: 3em; /* Zvýšeno pro větší vizuální dopad */
+    color: #1A237E; /* Královská modrá */
+    text-shadow: 2px 2px 5px rgba(255, 182, 193, 0.6);
+}
+
+/* Ostatní nadpisy */
+h2, h3 {
+    text-align: center;
+    color: #1A237E;
+    text-shadow: 1px 1px 3px rgba(255, 182, 193, 0.4);
+}
+
+/* Obrázek menší a umístěný vlevo */
+.avatar {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+.avatar img {
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 12px rgba(255, 105, 180, 0.4);
+}
+.tlacitko {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.tlacitko:hover {
+    background-color: #0056b3;
+}
