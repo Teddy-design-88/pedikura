@@ -217,10 +217,22 @@ footer a {
 
     /* Zajištění pozadí pro mobilní zařízení */
     body {
-        background: url("obrazky/pozadi.jpg") no-repeat center center fixed; /* Zajištění pozadí pro mobilní zařízení */
-        background-size: cover; /* Zajištění pokrytí celé obrazovky */
-        background-attachment: fixed; /* Fixní pozadí, které se nepohybuje při scrollování */
-        min-height: 100vh; /* Zajištění, že tělo stránky pokrývá celou obrazovku */
+        background: url("obrazky/pozadi.jpg") no-repeat center center fixed;
+        background-size: cover; /* Pokrytí celé obrazovky */
+        background-attachment: fixed; /* Fixní pozadí (nebude se posouvat) */
+        min-height: 100vh; /* Minimální výška na 100% obrazovky */
+        width: 100%; /* Šířka na 100% */
+        overflow-x: hidden; /* Skrýt horizontální scrollování, pokud je potřeba */
+    }
+    
+    /* Pro iOS a Webkit pro opravu pozadí */
+    @media screen and (max-width: 768px) {
+        body {
+            background-attachment: scroll; /* iOS neakceptuje fixed, tak to změníme na scroll */
+            background-position: center; /* Ujistíme se, že pozadí je vycentrováno */
+            background-size: cover;
+            min-height: 100vh; /* Zajištění, že tělo stránky pokryje celou výšku */
+        }
     }
 
     /* Navigační tlačítka */
