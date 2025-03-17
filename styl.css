@@ -182,3 +182,37 @@ footer a {
     color: white; /* Barva odkazu ve footeru */
     text-decoration: none; /* Bez podtržení odkazu */
 } /* Zavírací závorka pro pravidlo odkazu ve footeru */
+
+/* MEDIA QUERY pro mobilní zařízení */
+@media (max-width: 768px) {
+    /* Úprava menu pro mobilní zařízení */
+    nav ul {
+        flex-direction: column; /* Menu se přepne na vertikální */
+        width: 100%; /* Menu zaujme celou šířku */
+        text-align: center; /* Zarovnání textu do středu */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Okraje mezi položkami menu */
+    }
+
+    /* Úprava velikosti hlavního nadpisu pro mobilní verzi */
+    h1 {
+        font-size: 2.5em;
+    }
+
+    /* Úprava paddingu pro mobilní zařízení */
+    article {
+        padding: 20px 20px 10px 20px; /* Menší padding pro mobilní zařízení */
+    }
+
+    footer {
+        padding: 30px 0 0 0; /* Menší padding pro footer na mobilu */
+    }
+
+    /* Zajištění pozadí pro mobilní zařízení */
+    body {
+        background: url("obrazky/pozadi.jpg") no-repeat center center fixed; /* Zajištění pozadí pro mobilní zařízení */
+        background-size: cover; /* Zajištění pokrytí celé obrazovky */
+    }
+}
