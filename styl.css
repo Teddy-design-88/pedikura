@@ -1,196 +1,206 @@
+/* Definice písma pro celou stránku */
 @font-face {
-    font-family: "Poppins";
-    src: url("fonty/Poppins-Regular.ttf");
-    font-weight: normal;
-    font-style: normal;
+    font-family: "Poppins"; /* Název písma */
+    src: url("fonty/Poppins-Regular.ttf"); /* Cesta k souboru písma */
+    font-weight: normal; /* Normální tloušťka písma */
+    font-style: normal; /* Normální styl písma */
 }
 @font-face {
     font-family: "Poppins";
     src: url("fonty/Poppins-ExtraBold.ttf");
-    font-weight: bold;
+    font-weight: bold; /* Tučné písmo */
     font-style: normal;
 }
 
+/* Styl pro celé tělo stránky */
 body {
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: #1b0663;
-    box-sizing: border-box;
-    margin: 0;
-    background: url("obrazky/pozadi.jpg") no-repeat center center fixed;
-    background-size: cover;
+    font-family: "Poppins", sans-serif; /* Nastavení písma pro celý text */
+    font-size: 16px; /* Výchozí velikost písma */
+    font-weight: 500; /* Střední tloušťka písma */
+    color: #1b0663; /* Barva textu */
+    box-sizing: border-box; /* Zajištění, že padding a border jsou zahrnuty do šířky/šířky elementu */
+    margin: 0; /* Odstranění výchozího okraje */
+    background: url("obrazky/pozadi.jpg") no-repeat center center fixed; /* Nastavení pozadí s obrázkem */
+    background-size: cover; /* Pozadí pokrývá celou stránku */
 }
 
+/* Styl pro podtržený text */
 u { 
-    text-decoration: underline;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    font-size: 1.1em; 
-    font-weight: bold;
+    text-decoration: underline; /* Podtržení textu */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Stín pod textem */
+    font-size: 1.1em; /* Zvýšení velikosti písma */
+    font-weight: bold; /* Tučný text */
 }
 
+/* Styl pro odstavce */
 p {
-    font-size: 18px;
+    font-size: 18px; /* Velikost písma pro odstavce */
 }
 
+/* Styl pro hlavní nadpis */
 h1 {
-    text-align: center;
-    font-size: 3em;
-    color: #1A237E;
-    text-shadow: 2px 2px 4px rgba(255, 182, 193, 0.5);
+    text-align: center; /* Centrované zarovnání */
+    font-size: 3em; /* Velikost písma pro hlavní nadpis */
+    color: #1A237E; /* Barva textu */
+    text-shadow: 2px 2px 4px rgba(255, 182, 193, 0.5); /* Stín pod textem */
 }
 
+/* Styl pro podnadpisy */
 h2, h3 {
     text-align: center;
     color: #1A237E;
-    text-shadow: 1px 1px 3px rgba(255, 182, 193, 0.4);
+    text-shadow: 1px 1px 3px rgba(255, 182, 193, 0.4); /* Stín pod textem pro podnadpisy */
 }
 
+/* Styl pro obrázky s avatar */
 .avatar {
-    display: flex;
-    justify-content: flex-start;
-    margin: 10px 0;
+    display: flex; /* Používáme flexbox pro rozložení */
+    justify-content: flex-start; /* Zarovnání obrázku na začátek */
+    margin: 10px 0; /* Okraje kolem obrázku */
 }
 .avatar img {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 3px 3px 12px rgba(255, 105, 180, 0.4);
-    float: right;
-    padding-left: 10px;
-    filter: grayscale(1);
+    width: 300px; /* Šířka obrázku */
+    height: auto; /* Výška obrázku se upraví automaticky */
+    border-radius: 10px; /* Zaoblení rohů obrázku */
+    box-shadow: 3px 3px 12px rgba(255, 105, 180, 0.4); /* Stín kolem obrázku */
+    float: right; /* Umožňuje textu obíhat obrázek zprava */
+    padding-left: 10px; /* Vlevo okraj pro text */
+    filter: grayscale(1); /* Nastavení obrázku na šedý odstín */
 }
 
+/* Styl pro tlačítka */
 .tlacitko {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
+    display: inline-block; /* Tlačítko je inline-block */
+    padding: 10px 20px; /* Vnitřní okraje tlačítka */
+    background-color: #007bff; /* Barva pozadí tlačítka */
+    color: white; /* Barva textu */
+    text-decoration: none; /* Zrušení podtržení */
+    border-radius: 5px; /* Zaoblení rohů tlačítka */
+    font-weight: bold; /* Tučný text */
+    transition: background-color 0.3s ease-in-out; /* Plynulý přechod pro změnu barvy */
 }
 
+/* Efekt při najetí myší na tlačítko */
 .tlacitko:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Změna barvy pozadí při hover */
 }
+
+/* Styl pro tlačítka pro kontakt */
 .kontakt-tlacitko {
-    background: #EF6534;
-    padding: 10px 20px;
-    border-radius: 20px;
+    background: #EF6534; /* Barva pozadí tlačítka */
+    padding: 10px 20px; /* Vnitřní okraje */
+    border-radius: 20px; /* Zaoblení rohů */
 }
+
+/* Efekt pro tlačítka kontakt a reference při hover */
 .kontakt-tlacitko:hover,
 .reference-tlacitko:hover {
-    filter: brightness(115%) contrast(85%);
-    border: 0;
+    filter: brightness(115%) contrast(85%); /* Zvýšení jasu a kontrastu při hover */
+    border: 0; /* Odstranění okraje při hover */
 }
+
+/* Styl pro reference tlačítko */
 .reference-tlacitko {
-    background: #70B73A;
-    color: white;
-    font-size: 0.9em;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 25px 25px 25px 25px;
+    background: #70B73A; /* Barva pozadí tlačítka */
+    color: white; /* Barva textu */
+    font-size: 0.9em; /* Velikost písma */
+    text-transform: uppercase; /* Všechny písmena velká */
+    text-decoration: none; /* Zrušení podtržení */
+    padding: 12px 25px; /* Vnitřní okraje */
+    border-radius: 25px 25px 25px 25px; /* Zaoblení rohů */
 }
 
+/* Styl pro navigační menu */
 nav {
-    background-color: transparent;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: transparent; /* Průhledné pozadí */
+    padding: 10px 20px; /* Vnitřní okraje */
+    display: flex; /* Flexbox pro rozložení */
+    justify-content: space-between; /* Prostor mezi položkami */
+    align-items: center; /* Vertikální zarovnání */
 }
 
+/* Styl pro seznam položek v menu */
 nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    list-style-type: none;
+    list-style-type: none; /* Odstranění seznamového markeru */
 }
 
+/* Styl pro jednotlivé položky v menu */
 nav ul li {
-    margin: 0 10px;
+    margin: 0 10px; /* Okraje mezi položkami */
 }
 
+/* Styl pro odkazy v menu */
 nav ul a {
     display: block;
     padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    background-color: #007bff; /* Barva pozadí odkazu */
+    color: white; /* Barva textu */
+    text-decoration: none; /* Zrušení podtržení */
+    border-radius: 5px; /* Zaoblení rohů */
+    font-weight: bold; /* Tučný text */
+    transition: background-color 0.3s; /* Plynulý přechod pro změnu barvy */
 }
 
+/* Efekt při hover na odkaz */
 nav ul a:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Změna barvy při hover */
 }
 
+/* Styl pro logo v navigaci */
 #logo {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    display: flex; /* Flexbox pro rozložení */
+    align-items: center; /* Vertikální zarovnání */
+    justify-content: flex-start; /* Zarovnání na začátek */
 }
 
+/* Styl pro název loga */
 #logo h1 {
-    font-size: 1.5em;
-    margin: 0;
-    color: white;
+    font-size: 1.5em; /* Velikost písma pro logo */
+    margin: 0; /* Odstranění okraje */
+    color: white; /* Barva textu */
 }
 
+/* Styl pro hlavní nadpis na stránce */
 h1 {
-    font-size: 3.5em; /* Zvětší hlavní nadpis */
-    font-weight: bold;
+    font-size: 3.5em; /* Velikost písma pro hlavní nadpis */
+    font-weight: bold; /* Tučný text */
 }
 
+/* Styl pro specifickou část nadpisu */
 h1 span {
-    font-size: 1.2em; /* Zvětší "Horová" v nadpisu */
+    font-size: 1.2em; /* Zvýšení velikosti písma pro "Horová" */
 }
 
+/* Styl pro malý text pod nadpisem */
 small {
-    font-size: 1.5em; /* Zvětší text pod nadpisem */
+    font-size: 1.5em; /* Zvýšení velikosti písma pro malý text */
 }
+
+/* Styl pro HTML pozadí */
 html {
-    background: #414042;
+    background: #414042; /* Barva pozadí */
 }
+
+/* Styl pro patičku stránky */
 footer {
-    box-sizing: border-box;
-    text-align: center;
-    height: 100px;
-    color: white;
-    background: #414042;
-    padding: 50px 0 0 0;
-    clip-path: polygon(0 30px, 100% 0, 100% 105%, 0 105%);
+    box-sizing: border-box; /* Zahrnutí paddingu a borderu do rozměrů */
+    text-align: center; /* Centrované zarovnání textu */
+    height: 100px; /* Výška patičky */
+    color: white; /* Barva textu */
+    background: #414042; /* Barva pozadí */
+    padding: 50px 0 0 0; /* Vnitřní okraje */
+    clip-path: polygon(0 30px, 100% 0, 100% 105%, 0 105%); /* Zaoblené rohy */
 }
+
+/* Styl pro odkazy v patičce */
 footer a {
-    color: white;
-    text-decoration: none;
+    color: white; /* Barva textu */
+    text-decoration: none; /* Zrušení podtržení */
 }
+
+/* Styl pro horní hlavičku stránky */
 body > header {
-    height: 100px;
-    width: 100%;
-    background: #00386B;
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-}
-article {
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 50px 50px 10px 50px;
-}
-body {
-    font: 16px "Poppins";
-    background: url("obrazky/pozadi.jpg")
-    color: #414042;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 100px 0px 0px 0px;
-    min-width: 960px;
-}
+    height: 100px; /* Výška
