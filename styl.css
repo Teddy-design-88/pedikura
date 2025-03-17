@@ -184,21 +184,24 @@ footer a {
 } /* Zavírací závorka pro pravidlo odkazu ve footeru */
 
 /* MEDIA QUERY pro mobilní zařízení */
+/* MEDIA QUERY pro mobilní zařízení */
 @media (max-width: 768px) {
     /* Úprava menu pro mobilní zařízení */
     nav ul {
         flex-direction: column; /* Menu se přepne na vertikální */
         width: 100%; /* Menu zaujme celou šířku */
         text-align: center; /* Zarovnání textu do středu */
+        padding: 0; /* Zajištění, že nebudou žádné přebytečné okraje */
     }
 
     nav ul li {
         margin: 10px 0; /* Okraje mezi položkami menu */
+        width: 100%; /* Nastavení šířky tlačítek na 100% */
     }
 
     /* Úprava velikosti hlavního nadpisu pro mobilní verzi */
     h1 {
-        font-size: 2.5em;
+        font-size: 2.5em; /* Zmenšení nadpisu na mobilní verzi */
     }
 
     /* Úprava paddingu pro mobilní zařízení */
@@ -214,5 +217,19 @@ footer a {
     body {
         background: url("obrazky/pozadi.jpg") no-repeat center center fixed; /* Zajištění pozadí pro mobilní zařízení */
         background-size: cover; /* Zajištění pokrytí celé obrazovky */
+        background-attachment: fixed; /* Fixní pozadí, které se nepohybuje při scrollování */
+        min-height: 100vh; /* Zajištění, že tělo stránky pokrývá celou obrazovku */
+    }
+
+    /* Navigační tlačítka */
+    nav ul a {
+        padding: 10px 15px; /* Úprava paddingu pro tlačítka v menu */
+        font-size: 1.1em; /* Zvětšení velikosti písma pro mobilní zařízení */
+    }
+
+    /* Zajištění, že tlačítka nebudou příliš dlouhá */
+    nav ul li a {
+        width: 100%; /* Zajištění, že každé tlačítko bude mít 100% šířku */
+        text-align: center; /* Zarovnání textu do středu tlačítka */
     }
 }
