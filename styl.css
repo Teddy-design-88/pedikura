@@ -223,33 +223,45 @@ footer a {
         }
     }
 }
-/* MEDIA QUERY pro zařízení na šířku (landscape) */
-@media (orientation: landscape) {
-    /* Úprava pro horizontální zobrazení */
+/* MEDIA QUERY pro mobilní zařízení a šířkové zobrazení */
+@media (max-width: 768px) and (orientation: landscape) {
+    /* Úprava pro horizontální zobrazení - iOS fix */
     nav ul {
-        flex-direction: row; /* Tlačítka budou vedle sebe, ne pod sebou */
-        justify-content: flex-start; /* Zarovnání položek na začátek */
+        flex-direction: row !important; /* Tlačítka budou vedle sebe */
+        justify-content: flex-start !important; /* Zarovnání položek na začátek */
+        width: 100% !important; /* Zajištění šířky na 100% */
+        padding: 0 20px !important; /* Přidání paddingu pro lepší vzhled */
+        margin: 0 !important; /* Zrušení okrajů pro seznam */
     }
 
     nav ul li {
-        margin: 0 10px; /* Větší mezery mezi položkami */
-        width: auto; /* Nastavení šířky na automatickou (pro horizontální zobrazení) */
+        margin: 0 10px !important; /* Okraje mezi položkami */
+        width: auto !important; /* Nastavení šířky položek na automatickou */
     }
 
     /* Úprava pro hlavní nadpis */
     h1 {
-        font-size: 2.5em; /* Zvětšení nadpisu, pokud je potřeba */
-    }
-    
-    /* Zajištění, že tělo stránky bude na šířku */
-    body {
-        background-size: cover; /* Zajištění správného rozměru pozadí */
-        min-height: 100vh; /* Minimalizace výšky na 100% obrazovky */
+        font-size: 2.5em !important; /* Zvětšení nadpisu pro šířkové zobrazení */
     }
 
-    /* Upravit styl pro menu na šířku (na iOS) */
-    nav ul {
-        padding: 0 20px; /* Odsazení od okrajů pro lepší vzhled */
-        margin: 0; /* Zrušení okrajů pro seznam */
+    /* Tělo stránky na šířku - iOS fix */
+    body {
+        background-size: cover !important; /* Zajištění správného rozměru pozadí */
+        min-height: 100vh !important; /* Minimalizace výšky na 100% obrazovky */
+        width: 100% !important; /* Zajištění šířky stránky */
+    }
+
+    /* Úprava pro odkazy v menu */
+    nav ul a {
+        padding: 10px 20px !important; /* Zvětšení paddingu na odkazy v menu */
+        font-size: 1.1em !important; /* Zvětšení velikosti písma pro odkazy */
+        display: inline-block !important; /* Zajištění správného zobrazení */
+        width: auto !important; /* Automatická šířka pro tlačítka */
+        text-align: center !important; /* Zarovnání textu do středu */
+    }
+
+    /* Zajištění, že menu je zarovnáno horizontálně na šířku */
+    nav ul li a {
+        margin: 0 10px !important; /* Snížení mezery mezi tlačítky */
     }
 }
