@@ -147,15 +147,6 @@ nav ul a:hover {
     color: white; /* Barva textu loga */
 }
 
-h1 {
-    font-size: 3.5em; /* Velikost hlavního nadpisu */
-    font-weight: bold; /* Tučné písmo pro hlavní nadpis */
-}
-
-h1 span {
-    font-size: 1.2em; /* Zvýraznění části nadpisu */
-}
-
 /* Malý text pod nadpisem */
 small {
     font-size: 1.5em; /* Velikost písma pro malý text */
@@ -183,8 +174,6 @@ footer a {
     text-decoration: none; /* Bez podtržení odkazu */
 } /* Zavírací závorka pro pravidlo odkazu ve footeru */
 
-/* MEDIA QUERY pro mobilní zařízení */
-/* MEDIA QUERY pro mobilní zařízení */
 /* MEDIA QUERY pro mobilní zařízení */
 @media (max-width: 768px) {
     /* Úprava menu pro mobilní zařízení */
@@ -224,40 +213,13 @@ footer a {
         width: 100%; /* Šířka na 100% */
         overflow-x: hidden; /* Skrýt horizontální scrollování, pokud je potřeba */
     }
-    
+
     /* Pro iOS a Webkit pro opravu pozadí */
     @media screen and (max-width: 768px) {
         body {
             background-attachment: scroll; /* iOS neakceptuje fixed, tak to změníme na scroll */
-            background-position: center; /* Ujistíme se, že pozadí je vycentrováno */
+            background-position: center center;
             background-size: cover;
-            min-height: 100vh; /* Zajištění, že tělo stránky pokryje celou výšku */
         }
-    }
-
-    /* Navigační tlačítka */
-    nav ul a {
-        padding: 10px 15px; /* Úprava paddingu pro tlačítka v menu */
-        font-size: 1.1em; /* Zvětšení velikosti písma pro mobilní zařízení */
-        display: block; /* Nastavení odkazu jako blokový prvek pro lepší kontrolu */
-        width: 100%; /* Zajištění, že každé tlačítko bude mít 100% šířku */
-        text-align: center; /* Zarovnání textu do středu tlačítka */
-    }
-
-    /* Tlačítka a jejich efekt */
-    nav ul li a {
-        margin: 5px 0; /* Snížení okraje mezi tlačítky */
-        padding: 12px 25px; /* Větší padding pro tlačítka */
-        background-color: #007bff; /* Barva pozadí pro tlačítka */
-        color: white; /* Barva textu tlačítka */
-        font-weight: bold; /* Tučné písmo */
-        border-radius: 5px; /* Zaoblení rohů tlačítek */
-        text-decoration: none; /* Zrušení podtržení */
-    }
-
-    /* Efekt na tlačítko při hoveru */
-    nav ul li a:hover {
-        background-color: #0056b3; /* Změna barvy při hoveru */
-        filter: brightness(115%); /* Zajištění lepšího kontrastu při hoveru */
     }
 }
