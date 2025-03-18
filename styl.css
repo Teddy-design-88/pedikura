@@ -223,3 +223,33 @@ footer a {
         }
     }
 }
+/* MEDIA QUERY pro zařízení na šířku (landscape) */
+@media (orientation: landscape) {
+    /* Úprava pro horizontální zobrazení */
+    nav ul {
+        flex-direction: row; /* Tlačítka budou vedle sebe, ne pod sebou */
+        justify-content: flex-start; /* Zarovnání položek na začátek */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Větší mezery mezi položkami */
+        width: auto; /* Nastavení šířky na automatickou (pro horizontální zobrazení) */
+    }
+
+    /* Úprava pro hlavní nadpis */
+    h1 {
+        font-size: 2.5em; /* Zvětšení nadpisu, pokud je potřeba */
+    }
+    
+    /* Zajištění, že tělo stránky bude na šířku */
+    body {
+        background-size: cover; /* Zajištění správného rozměru pozadí */
+        min-height: 100vh; /* Minimalizace výšky na 100% obrazovky */
+    }
+
+    /* Upravit styl pro menu na šířku (na iOS) */
+    nav ul {
+        padding: 0 20px; /* Odsazení od okrajů pro lepší vzhled */
+        margin: 0; /* Zrušení okrajů pro seznam */
+    }
+}
