@@ -20,7 +20,7 @@ body {
     color: #1b0663; /* Nastavení barvy textu na tmavě modrou */
     box-sizing: border-box; /* Zajišťuje, že padding a border jsou součástí šířky elementu */
     margin: 0; /* Odstraní výchozí okraje pro celé tělo */
-    background: url("obrazky/pozadi.jpg") no-repeat center center fixed; /* Nastavení pozadí, které se neponaví a bude fixované ve středu */
+    background: url("obrazky/pozadi2.jpg") no-repeat center center fixed; /* Nastavení pozadí, které se neponaví a bude fixované ve středu */
     background-size: cover; /* Pozadí pokryje celou plochu těla stránky, nezmizí ani se nepřizpůsobí */
 }
 
@@ -154,6 +154,7 @@ small {
 
 /* Styl pro pozadí celé stránky */
 html {
+    height: 100%;
     background: #414042; /* Nastavení barvy pozadí celé stránky */
 }
 
@@ -212,6 +213,7 @@ footer a {
         min-height: 100vh; /* Minimální výška na 100% obrazovky */
         width: 100%; /* Šířka na 100% */
         overflow-x: hidden; /* Skrýt horizontální scrollování, pokud je potřeba */
+        margin: 0;
     }
 
     /* Pro iOS a Webkit pro opravu pozadí */
