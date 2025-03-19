@@ -1,269 +1,121 @@
 /* @font-face pro Poppins fonty */
 @font-face {
-    font-family: "Poppins"; /* Určuje název písma, které budeme používat */
-    src: url("fonty/Poppins-Regular.ttf"); /* Cesta k souboru s písmem (Regular verze) */
-    font-weight: normal; /* Určuje normální váhu písma */
-    font-style: normal; /* Určuje normální styl písma (ne kurzíva) */
+    font-family: "Poppins";
+    src: url("fonty/Poppins-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-    font-family: "Poppins"; /* Určuje název písma */
-    src: url("fonty/Poppins-ExtraBold.ttf"); /* Cesta k souboru s tučným písmem */
-    font-weight: bold; /* Určuje, že toto písmo bude tučné */
-    font-style: normal; /* Styl zůstává normální */
+    font-family: "Poppins";
+    src: url("fonty/Poppins-ExtraBold.ttf");
+    font-weight: bold;
+    font-style: normal;
 }
 
 /* Základní nastavení pro celé tělo webu */
 body {
-    font-family: "Poppins", sans-serif; /* Určuje font pro celý text, první volba je Poppins */
-    font-size: 16px; /* Nastavení velikosti písma na 16px pro čitelnost */
-    font-weight: 500; /* Nastavení váhy písma (střední váha) */
-    color: #1b0663; /* Nastavení barvy textu na tmavě modrou */
-    box-sizing: border-box; /* Zajišťuje, že padding a border jsou součástí šířky elementu */
-    margin: 0; /* Odstraní výchozí okraje pro celé tělo */
-    background: url("obrazky/pozadi2.jpg") no-repeat center center fixed; /* Nastavení pozadí, které se neponaví a bude fixované ve středu */
-    background-size: cover; /* Pozadí pokryje celou plochu těla stránky, nezmizí ani se nepřizpůsobí */
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1b0663;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 80px 20px 20px; /* Přidání paddingu na vrch pro fixní menu */
+    background: url("obrazky/pozadi2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Styl pro nadpis h1 */
-h1 {
-    text-align: center; /* Zarovnání textu do středu */
-    font-size: 3em; /* Velikost písma je 3x větší než výchozí */
-    color: #1A237E; /* Barva textu (tmavě modrá) */
-    text-shadow: 2px 2px 4px rgba(255, 182, 193, 0.5); /* Efekt stínu pod textem, zjemňuje vzhled */
-}
-
-/* Styl pro ostatní nadpisy h2 a h3 */
-h2, h3 {
-    text-align: center; /* Zarovnání textu do středu */
-    color: #1A237E; /* Barva textu */
-    text-shadow: 1px 1px 3px rgba(255, 182, 193, 0.4); /* Jemný stín pro nadpisy */
-}
-
-/* Obrázky s třídou "avatar" */
-.avatar {
-    display: flex; /* Použití Flexboxu pro uspořádání obrázku */
-    justify-content: flex-start; /* Obrázek bude na začátku řádku (na levé straně) */
-    margin: 10px 0; /* Okraje nad a pod obrázkem */
-}
-
-.avatar img {
-    width: 300px; /* Šířka obrázku je nastavena na 300px */
-    height: auto; /* Výška obrázku se automaticky přizpůsobí zachování poměru stran */
-    border-radius: 10px; /* Zaoblení rohů obrázku */
-    box-shadow: 3px 3px 12px rgba(255, 105, 180, 0.4); /* Jemný stín kolem obrázku */
-    float: right; /* Posunutí obrázku na pravou stranu */
-    padding-left: 10px; /* Přidání odsazení vlevo pro lepší vzhled */
-    filter: grayscale(1); /* Nastavení obrázku na černobílo (šedý filtr) */
-}
-
-/* Styl pro tlačítka */
-.tlacitko {
-    display: inline-block; /* Zobrazení tlačítka jako inline blok */
-    padding: 10px 20px; /* Padding (vnitřní okraje) pro tlačítko */
-    background-color: #007bff; /* Modré pozadí tlačítka */
-    color: white; /* Barva textu na tlačítku */
-    text-decoration: none; /* Zrušení podtržení textu (pokud by to byl odkaz) */
-    border-radius: 5px; /* Zaoblení rohů tlačítka */
-    font-weight: bold; /* Tučné písmo na tlačítku */
-    transition: background-color 0.3s ease-in-out; /* Efekt změny barvy při najetí myší */
-}
-
-/* Efekt na tlačítko při hoveru */
-.tlacitko:hover {
-    background-color: #0056b3; /* Změna barvy tlačítka při přejetí myší na tmavší odstín modré */
-}
-
-/* Styl pro speciální kontakt tlačítko */
-.kontakt-tlacitko {
-    background: #EF6534; /* Oranžová barva pozadí */
-    padding: 10px 20px; /* Padding */
-    border-radius: 20px; /* Zaoblení rohů */
-}
-
-/* Efekt pro tlačítka při hoveru */
-.kontakt-tlacitko:hover,
-.reference-tlacitko:hover {
-    filter: brightness(115%) contrast(85%); /* Změna kontrastu a jasu při hoveru */
-    border: 0; /* Odstranění rámečku při hoveru */
-}
-
-/* Styl pro reference tlačítko */
-.reference-tlacitko {
-    background: #70B73A; /* Zelené pozadí */
-    color: white; /* Barva textu */
-    font-size: 0.9em; /* Velikost písma o něco menší */
-    text-transform: uppercase; /* Písmo bude velkými písmeny */
-    text-decoration: none; /* Bez podtržení */
-    padding: 12px 25px; /* Padding pro tlačítko */
-    border-radius: 25px; /* Zaoblení rohů tlačítka */
-}
-
-/* Navigační menu */
+/* Navigační menu - bez pozadí, fixní na vrchu */
 nav {
-    background-color: transparent; /* Průhledné pozadí pro navigaci */
-    padding: 10px 20px; /* Padding kolem navigačního menu */
-    display: flex; /* Flexbox pro zarovnání položek v menu */
-    justify-content: space-between; /* Vytváří mezery mezi položkami menu */
-    align-items: center; /* Vertikální zarovnání položek menu */
+    background: none; /* Odebrání pozadí */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Horizontální zarovnání obsahu */
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    position: fixed; /* Fixní pozice */
+    top: 0; /* Umístění na vrchol */
+    width: 100%; /* Šířka na celou obrazovku */
+    z-index: 1000; /* Aby byla vždy nad ostatním obsahem */
 }
 
 nav ul {
-    margin: 0; /* Zrušení výchozího marginu */
-    padding: 0; /* Zrušení výchozího paddingu */
-    display: flex; /* Flexbox pro seznam položek menu */
-    list-style-type: none; /* Zrušení seznamového stylu (tečky u položek) */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    justify-content: center; /* Horizontální zarovnání položek */
+    align-items: center;
 }
 
 nav ul li {
-    margin: 0 10px; /* Okraje mezi položkami menu */
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav ul a {
-    display: block; /* Odkazy v menu jsou blokové prvky */
-    padding: 10px 15px; /* Padding pro odkazy */
-    background-color: #007bff; /* Modré pozadí pro odkazy v menu */
-    color: white; /* Barva textu odkazu */
-    text-decoration: none; /* Zrušení podtržení odkazu */
-    border-radius: 5px; /* Zaoblení rohů odkazu */
-    font-weight: bold; /* Tučné písmo pro odkazy */
-    transition: background-color 0.3s; /* Efekt na pozadí odkazu při hoveru */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    background-color: rgba(169, 169, 169, 0.2); /* Šedý odstín pro pozadí */
+    color: #333333; /* Tmavě šedá pro text */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s, color 0.3s;
+    border: 1px solid rgba(169, 169, 169, 0.5); /* Šedá barva pro okraj */
 }
 
-/* Efekt na odkazy v menu při hoveru */
 nav ul a:hover {
-    background-color: #0056b3; /* Změna barvy při hoveru */
+    background-color: rgba(169, 169, 169, 0.3); /* Světlejší šedý odstín při hoveru */
+    transform: scale(1.05);
+    color: #000000; /* Změna barvy textu na černou při hoveru */
 }
 
-/* Logo v menu */
-#logo {
-    display: flex; /* Flexbox pro umístění loga */
-    align-items: center; /* Vertikální zarovnání loga */
-    justify-content: flex-start; /* Zarovnání loga na levý okraj */
-}
-
+/* Hlavní nadpis Jana Horová - fixní na vrchu */
 #logo h1 {
-    font-size: 1.5em; /* Velikost písma pro logo */
-    margin: 0; /* Zrušení marginu kolem loga */
-    color: white; /* Barva textu loga */
+    font-size: 2.5em;
+    margin: 0;
+    color: #1A237E;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: fixed; /* Fixní pozice */
+    top: 60px; /* Umístění pod navigační menu */
+    width: 100%;
+    z-index: 999; /* Aby byl nad ostatním obsahem, ale pod menu */
 }
 
-/* Malý text pod nadpisem */
-small {
-    font-size: 1.5em; /* Velikost písma pro malý text */
+/* Slovo Pedikúra pod nápisem a větší */
+#pedikura {
+    display: block;
+    text-align: center;
+    font-size: 2.7em;
+    color: #1A237E;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-/* Styl pro pozadí celé stránky */
-html {
-    height: 100%;
-    background: #414042; /* Nastavení barvy pozadí celé stránky */
+/* Úprava růžového pozadí tlačítek pro lepší kontrast */
+.tlacitko {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(169, 169, 169, 0.5); /* Šedá barva pro okraj */
+    backdrop-filter: blur(5px);
 }
 
-/* Styl pro footer */
-footer {
-    box-sizing: border-box; /* Zahrnutí paddingu a borderu do šířky a výšky footeru */
-    text-align: center; /* Centrovaný text ve footeru */
-    height: 100px; /* Výška footeru */
-    color: white; /* Barva textu ve footeru */
-    background: #414042; /* Barva pozadí footeru */
-    padding: 50px 0 0 0; /* Padding pro footer */
-    clip-path: polygon(0 30px, 100% 0, 100% 105%, 0 105%); /* Tvar footeru */
-}
-
-/* Styl pro odkazy ve footeru */
-footer a {
-    color: white; /* Barva odkazu ve footeru */
-    text-decoration: none; /* Bez podtržení odkazu */
-} /* Zavírací závorka pro pravidlo odkazu ve footeru */
-
-/* MEDIA QUERY pro mobilní zařízení */
-@media (max-width: 768px) {
-    /* Úprava menu pro mobilní zařízení */
-    nav ul {
-        flex-direction: column; /* Menu se přepne na vertikální */
-        width: 100%; /* Menu zaujme celou šířku */
-        text-align: center; /* Zarovnání textu do středu */
-        padding: 0; /* Zajištění, že nebudou žádné přebytečné okraje */
-        margin: 0; /* Zajištění, že mezi položkami menu nebudou mezery */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Okraje mezi položkami menu */
-        width: 100%; /* Nastavení šířky tlačítek na 100% */
-    }
-
-    /* Úprava velikosti hlavního nadpisu pro mobilní verzi */
-    h1 {
-        font-size: 2.5em; /* Zmenšení nadpisu na mobilní verzi */
-    }
-
-    /* Úprava paddingu pro mobilní zařízení */
-    article {
-        padding: 20px 20px 10px 20px; /* Menší padding pro mobilní zařízení */
-    }
-
-    footer {
-        padding: 30px 0 0 0; /* Menší padding pro footer na mobilu */
-    }
-
-    /* Zajištění pozadí pro mobilní zařízení */
-    body {
-        background: url("obrazky/pozadi.jpg") no-repeat center center fixed;
-        background-size: cover; /* Pokrytí celé obrazovky */
-        background-attachment: fixed; /* Fixní pozadí (nebude se posouvat) */
-        min-height: 100vh; /* Minimální výška na 100% obrazovky */
-        width: 100%; /* Šířka na 100% */
-        overflow-x: hidden; /* Skrýt horizontální scrollování, pokud je potřeba */
-        margin: 0;
-    }
-
-    /* Pro iOS a Webkit pro opravu pozadí */
-    @media screen and (max-width: 768px) {
-        body {
-            background-attachment: scroll; /* iOS neakceptuje fixed, tak to změníme na scroll */
-            background-position: center center;
-            background-size: cover;
-        }
-    }
-}
-/* MEDIA QUERY pro mobilní zařízení a šířkové zobrazení */
-@media (max-width: 768px) and (orientation: landscape) {
-    /* Úprava pro horizontální zobrazení - iOS fix */
-    nav ul {
-        flex-direction: row !important; /* Tlačítka budou vedle sebe */
-        justify-content: flex-start !important; /* Zarovnání položek na začátek */
-        width: 100% !important; /* Zajištění šířky na 100% */
-        padding: 0 20px !important; /* Přidání paddingu pro lepší vzhled */
-        margin: 0 !important; /* Zrušení okrajů pro seznam */
-    }
-
-    nav ul li {
-        margin: 0 10px !important; /* Okraje mezi položkami */
-        width: auto !important; /* Nastavení šířky položek na automatickou */
-    }
-
-    /* Úprava pro hlavní nadpis */
-    h1 {
-        font-size: 2.5em !important; /* Zvětšení nadpisu pro šířkové zobrazení */
-    }
-
-    /* Tělo stránky na šířku - iOS fix */
-    body {
-        background-size: cover !important; /* Zajištění správného rozměru pozadí */
-        min-height: 100vh !important; /* Minimalizace výšky na 100% obrazovky */
-        width: 100% !important; /* Zajištění šířky stránky */
-    }
-
-    /* Úprava pro odkazy v menu */
-    nav ul a {
-        padding: 10px 20px !important; /* Zvětšení paddingu na odkazy v menu */
-        font-size: 1.1em !important; /* Zvětšení velikosti písma pro odkazy */
-        display: inline-block !important; /* Zajištění správného zobrazení */
-        width: auto !important; /* Automatická šířka pro tlačítka */
-        text-align: center !important; /* Zarovnání textu do středu */
-    }
-
-    /* Zajištění, že menu je zarovnáno horizontálně na šířku */
-    nav ul li a {
-        margin: 0 10px !important; /* Snížení mezery mezi tlačítky */
-    }
+.tlacitko:hover {
+    background-color: rgba(169, 169, 169, 0.2); /* Světlejší šedý odstín při hoveru */
+    transform: scale(1.05);
 }
