@@ -12,6 +12,25 @@
     font-style: normal;
 }
 
+html {
+    background: #414042;
+}
+
+/* Styly pro patičku */
+footer {
+    box-sizing: border-box;
+    text-align: center;
+    height: 100px;
+    color: white;
+    background: #414042;
+    padding: 50px 0 0 0;
+    clip-path: polygon(0 30px, 100% 0, 100% 105%, 0 105%);
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
 /* Základní nastavení pro celé tělo webu */
 body {
     font-family: "Poppins", sans-serif;
@@ -24,6 +43,48 @@ body {
     background: url("obrazky/pozadi2.jpg") no-repeat center center fixed;
     background-size: cover;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.vlevo {
+    float: left;
+}
+
+#dovednosti td {
+    width: 33%;
+    padding: 10px;
+    vertical-align: top;
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+/* Styly pro galerii obrázků */
+#reference {
+    display: flex; /* Obrázky vedle sebe */
+    justify-content: center; /* Vycentrování */
+    gap: 15px; /* Mezera mezi obrázky */
+    flex-wrap: wrap; /* Pokud je málo místa, zalomí se na další řádek */
+}
+
+#reference a {
+    text-decoration: none;
+}
+#reference a:hover {
+    text-decoration: none;
+}
+#reference img {
+    border: 1px solid gray;
+    padding: 6px;
+    box-shadow: 3px 3px 6px #999999;
+    margin-right: 6px;
+    width: 200px;  /* Stejná šířka */
+    height: 150px; /* Stejná výška */
+    object-fit: cover; /* Zajistí, že obrázek bude vyplňovat zadané rozměry */
+    border-radius: 8px; /* Lehce zaoblené rohy */
+    transition: transform 0.3s ease; /* Efekt při najetí myší */
+}
+
+#reference img:hover {
+    transform: scale(1.1); /* Přiblížení obrázku při najetí */
 }
 
 /* Navigační menu - bez pozadí, fixní na vrchu */
